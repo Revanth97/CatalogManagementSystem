@@ -17,7 +17,7 @@ public interface CatalogRepository extends CrudRepository<SKU, Long> {
 	@Query("from SKU where lower(description) LIKE CONCAT('%',:keyword,'%') OR lower(title) LIKE CONCAT('%',:keyword,'%')")
 	List<SKU> searchByTitleOrDescriptionLike(String keyword);
 	
-	@Query("from SKU where price >= :price")
-	List<SKU> searchByPriceGreaterThan(BigDecimal price);
+	@Query("from SKU where price > :greaterThan AND price < :lessThan")
+	List<SKU> searchByPriceGreaterThanAndLessThan(BigDecimal greaterThan, BigDecimal lessThan);
 
 }

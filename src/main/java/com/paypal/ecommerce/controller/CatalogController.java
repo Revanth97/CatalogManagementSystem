@@ -61,8 +61,8 @@ public class CatalogController {
 	}
 	
 	@GetMapping(value = "/search/price")
-	public List<SKU> searchByPriceGreaterThan(@RequestParam("gt") BigDecimal price) {
-		return catalogService.searchByPriceGreaterThan(price);
+	public List<SKU> searchByPriceGreaterThan(@RequestParam("gt") BigDecimal greaterThan, @RequestParam("lt") BigDecimal lessThan) {
+		return catalogService.searchByPriceGreaterThanAndLessThan(greaterThan, lessThan);
 	}
 
 }

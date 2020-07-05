@@ -55,8 +55,8 @@ public class CatalogService {
 		return catalogRepository.searchByTitleOrDescriptionLike(keyword);
 	}
 
-	public List<SKU> searchByPriceGreaterThan(BigDecimal price) {
-		return catalogRepository.searchByPriceGreaterThan(price);
+	public List<SKU> searchByPriceGreaterThanAndLessThan(BigDecimal greaterThan, BigDecimal lessThan) {
+		return catalogRepository.searchByPriceGreaterThanAndLessThan(greaterThan, lessThan);
 	}
 
 }
