@@ -9,3 +9,5 @@ Steps to run the Spring Boot Application
 5) The default jdbc url for the h2 database is already configured in application.properties. If the jdbc url is different in the UI than the one configured in property file, copy paste jdbc url from property file in the web UI.
 
 The app has all the CRUD operations which can be tested using cURL or Postman. 
+
+The search functionality is case insensitive and the search is on description and title fields on the SKU model.
